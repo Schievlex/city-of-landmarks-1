@@ -2,3 +2,6 @@
 
 <p>Kind: <%= @landmark.kind %></p>
 <%= image_tag @landmark.image_url %>
+
+<%= link_to "[Edit]", edit_landmark_path(@landmark.id) %>
+<%= link_to "[Delete]", landmark_path(@landmark.id), method: :delete, data: { confirm: "Are you sure?" } %>
