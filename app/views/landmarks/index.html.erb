@@ -1,5 +1,9 @@
 <h1>Landmarks</h1>
 
 <% @landmarks.each do |landmark| %>
-  <p><%= landmark.name %></p>
+    <p><%= link_to landmark.name, landmark_path(landmark.id) %></p>
 <% end %>
+
+<hr>
+
+<%= link_to "[New Landmark]", new_landmark_path %>

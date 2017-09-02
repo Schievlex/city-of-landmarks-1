@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   root "landmarks#index"
 
   get "landmarks" => "landmarks#index"
+  get 'landmarks/new' => "landmarks#new", as: :new_landmark
+  get "landmarks/:id" => "landmarks#show", as: :landmark
+
+  post "landmarks" => "landmarks#create"
 end
